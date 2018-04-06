@@ -17,9 +17,9 @@ class SecondViewController: UIViewController, MKMapViewDelegate {
     lazy var ua:MKPointAnnotation = {
         
         var ann = MKPointAnnotation()
-        ann.coordinate = CLLocationCoordinate2DMake(41.0778312683105, -81.510684290037237)
-        ann.title = "University of Akron"
-        ann.subtitle = "College of Arts and Sciences"
+        ann.coordinate = CLLocationCoordinate2DMake(41.496577, -81.688076)
+        ann.title = "Cleveland"
+        ann.subtitle = "Quicken Loans Arena"
         
         return ann
     }()
@@ -41,7 +41,7 @@ class SecondViewController: UIViewController, MKMapViewDelegate {
         self.mapView.mapType = .hybrid
         
         // region around UA
-        let UALocation = CLLocationCoordinate2DMake(41.0778312683105, -81.510684290037237)
+        let UALocation = CLLocationCoordinate2DMake(41.496577, -81.688076)
         let mapRegion = MKCoordinateRegion(center: UALocation, span: MKCoordinateSpanMake(0.001, 0.001))
         
         // zoom the map to the location

@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -101,33 +100,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="80" y="363" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HE5-Pr-W0u">
-                                <rect key="frame" x="8" y="6" width="360" height="287"/>
+                                <rect key="frame" x="7" y="143" width="360" height="139"/>
                             </mapView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="80" y="415" width="202" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where would you like to go?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSL-Wl-NBZ">
+                                <rect key="frame" x="67" y="311" width="215" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.31720122845319987" green="1" blue="0.25701741939099521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Your location Here" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YA8-IX-XQw">
+                                <rect key="frame" x="75" y="360" width="198" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="HE5-Pr-W0u" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="8" id="2Mj-Gy-yFP"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="-95" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" constant="6.5" id="JgO-Fn-dHn"/>
-                            <constraint firstItem="HE5-Pr-W0u" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="topMargin" constant="-14" id="NSR-Eg-d4y"/>
-                            <constraint firstItem="HE5-Pr-W0u" firstAttribute="centerX" secondItem="NDk-cv-Gan" secondAttribute="centerX" id="PPR-5z-fjM"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="HE5-Pr-W0u" secondAttribute="bottom" constant="70" id="ati-bE-NM0"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" constant="6.5" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" constant="-103" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="ZSL-Wl-NBZ" secondAttribute="trailing" constant="93" id="4c5-ij-74U"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="YA8-IX-XQw" secondAttribute="trailing" constant="102" id="4eg-Mu-roe"/>
+                            <constraint firstItem="YA8-IX-XQw" firstAttribute="top" secondItem="ZSL-Wl-NBZ" secondAttribute="bottom" constant="28" id="4gm-MP-XDd"/>
+                            <constraint firstItem="YA8-IX-XQw" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="75" id="4rG-b5-cxu"/>
+                            <constraint firstItem="HE5-Pr-W0u" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="123" id="BHg-HD-wUw"/>
+                            <constraint firstItem="ZSL-Wl-NBZ" firstAttribute="top" secondItem="HE5-Pr-W0u" secondAttribute="bottom" constant="29" id="Gbc-Ez-xHO"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="HE5-Pr-W0u" secondAttribute="trailing" constant="8" id="O8s-gG-HSW"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="YA8-IX-XQw" secondAttribute="bottom" constant="228" id="RCY-cA-J74"/>
+                            <constraint firstItem="HE5-Pr-W0u" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="7" id="Vh4-3A-zMQ"/>
+                            <constraint firstItem="ZSL-Wl-NBZ" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="67" id="m2D-yS-6Ps"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
