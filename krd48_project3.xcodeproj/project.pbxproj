@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FAA2E982207BEC3C00469AC1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2E981207BEC3C00469AC1 /* CloudKit.framework */; };
 		FAD926E22077EEF9009A3817 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD926E12077EEF9009A3817 /* AppDelegate.swift */; };
 		FAD926E42077EEF9009A3817 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD926E32077EEF9009A3817 /* FirstViewController.swift */; };
 		FAD926E62077EEF9009A3817 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD926E52077EEF9009A3817 /* SecondViewController.swift */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA6A949A207BE68100CE08AA /* krd48_project3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = krd48_project3.entitlements; sourceTree = "<group>"; };
+		FAA2E981207BEC3C00469AC1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		FAD926DE2077EEF9009A3817 /* krd48_project3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = krd48_project3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD926E12077EEF9009A3817 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD926E32077EEF9009A3817 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +32,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA2E982207BEC3C00469AC1 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA6A949B207BE69900CE08AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2E981207BEC3C00469AC1 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FAD926D52077EEF9009A3817 = {
 			isa = PBXGroup;
 			children = (
 				FAD926E02077EEF9009A3817 /* krd48_project3 */,
 				FAD926DF2077EEF9009A3817 /* Products */,
+				FA6A949B207BE69900CE08AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +67,7 @@
 		FAD926E02077EEF9009A3817 /* krd48_project3 */ = {
 			isa = PBXGroup;
 			children = (
+				FA6A949A207BE68100CE08AA /* krd48_project3.entitlements */,
 				FAD926E12077EEF9009A3817 /* AppDelegate.swift */,
 				FAD926E32077EEF9009A3817 /* FirstViewController.swift */,
 				FAD926E52077EEF9009A3817 /* SecondViewController.swift */,
@@ -96,7 +110,15 @@
 				TargetAttributes = {
 					FAD926DD2077EEF9009A3817 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -266,12 +288,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = krd48_project3/krd48_project3.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3FT8PS6NT6;
 				INFOPLIST_FILE = krd48_project3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.uakron.cs.ios.krd48.krd48-project3";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ae742203-a9cd-447e-aa39-314f5cc850dc";
+				PROVISIONING_PROFILE_SPECIFIER = krd48;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -281,12 +307,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = krd48_project3/krd48_project3.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3FT8PS6NT6;
 				INFOPLIST_FILE = krd48_project3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.uakron.cs.ios.krd48.krd48-project3";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ae742203-a9cd-447e-aa39-314f5cc850dc";
+				PROVISIONING_PROFILE_SPECIFIER = krd48;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
