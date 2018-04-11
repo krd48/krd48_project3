@@ -152,6 +152,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pizza.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NyG-uc-yd1">
                                 <rect key="frame" x="103" y="245" width="223" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="naf-d4-jOi" appends="YES" id="RdL-ku-DH7"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -163,6 +167,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GdR-So-97o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="naf-d4-jOi">
+                    <connections>
+                        <action selector="pan:" destination="ugg-S9-R4H" id="Met-4z-3nj"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1579.7101449275362" y="51.358695652173914"/>
         </scene>
