@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA4F09A1207E8593002C8B4B /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F09A0207E8593002C8B4B /* ThirdViewController.swift */; };
+		FA4F09A3207E8808002C8B4B /* pizza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA4F09A2207E8808002C8B4B /* pizza.jpg */; };
 		FAA2E982207BEC3C00469AC1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2E981207BEC3C00469AC1 /* CloudKit.framework */; };
 		FAD926E22077EEF9009A3817 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD926E12077EEF9009A3817 /* AppDelegate.swift */; };
 		FAD926E42077EEF9009A3817 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD926E32077EEF9009A3817 /* FirstViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA4F09A0207E8593002C8B4B /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		FA4F09A2207E8808002C8B4B /* pizza.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pizza.jpg; path = ../../pizza.jpg; sourceTree = "<group>"; };
 		FA6A949A207BE68100CE08AA /* krd48_project3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = krd48_project3.entitlements; sourceTree = "<group>"; };
 		FAA2E981207BEC3C00469AC1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		FAD926DE2077EEF9009A3817 /* krd48_project3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = krd48_project3.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,10 +71,12 @@
 		FAD926E02077EEF9009A3817 /* krd48_project3 */ = {
 			isa = PBXGroup;
 			children = (
+				FA4F09A2207E8808002C8B4B /* pizza.jpg */,
 				FA6A949A207BE68100CE08AA /* krd48_project3.entitlements */,
 				FAD926E12077EEF9009A3817 /* AppDelegate.swift */,
 				FAD926E32077EEF9009A3817 /* FirstViewController.swift */,
 				FAD926E52077EEF9009A3817 /* SecondViewController.swift */,
+				FA4F09A0207E8593002C8B4B /* ThirdViewController.swift */,
 				FAD926E72077EEF9009A3817 /* Main.storyboard */,
 				FAD926EA2077EEF9009A3817 /* Assets.xcassets */,
 				FAD926EF2077EEF9009A3817 /* Info.plist */,
@@ -147,6 +153,7 @@
 			files = (
 				FAD926EB2077EEF9009A3817 /* Assets.xcassets in Resources */,
 				FAD926E92077EEF9009A3817 /* Main.storyboard in Resources */,
+				FA4F09A3207E8808002C8B4B /* pizza.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +166,7 @@
 			files = (
 				FAD926E62077EEF9009A3817 /* SecondViewController.swift in Sources */,
 				FAD926E22077EEF9009A3817 /* AppDelegate.swift in Sources */,
+				FA4F09A1207E8593002C8B4B /* ThirdViewController.swift in Sources */,
 				FAD926E42077EEF9009A3817 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
