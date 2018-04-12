@@ -8,9 +8,11 @@
 
 import UIKit
 import MapKit
+import CloudKit
 
-class SecondViewController: UIViewController, MKMapViewDelegate {
+class SecondViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
 
+    @IBOutlet weak var Location: UITextField!
     @IBOutlet weak var mapView: MKMapView!
     lazy var location = CLLocationManager()
     
@@ -27,6 +29,8 @@ class SecondViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.Location.delegate = self
+
         self.mapView.delegate = self
         
         // Note: consider changing to only what is needed
@@ -71,6 +75,79 @@ class SecondViewController: UIViewController, MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didFailToLocateUserWithError error: Error) {
         print(#function)
         print(error)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        self.Location.resignFirstResponder()
+       DispatchQueue.main.async { //performs all writing to plist actions
+            if let location = self.Location.text{
+                
+                CKContainer.default().fetchUserRecordID() {
+                    recordID, error in
+                    
+                    if let error = error {
+                        print(error.localizedDescription)
+                        return
+                    }
+                    
+                    guard let userID = recordID?.recordName else {
+                        print("Error: Unable to get unique user ID")
+                        return
+                    }
+                    
+                    print("User ID: \(userID)")
+                }
+                
+                let publicDB = CKContainer.default().publicCloudDatabase
+                let userNameRecord = CKRecord(recordType: "status") // //creates the record
+                userNameRecord["location"] = location as CKRecordValue // c
+                print("record name: \(userNameRecord)")
+                
+                publicDB.save(userNameRecord) {
+                    record, error in
+                    if let error = error {
+                        print(error)
+                        return
+                    }
+                    guard let savedRecord = record else {
+                        print("Error: Unable to access record from save")
+                        return
+                    }
+                    print("Saved Record: \(savedRecord) RecordID: \(savedRecord.recordID)")
+                    
+                    
+                    
+                    publicDB.fetch(withRecordID: savedRecord.recordID) {
+                        record, error in
+                        if let error = error {
+                            print(error)
+                            return
+                        }
+                        guard let fetchedRecord = record else {
+                            return
+                        }
+                        print("Fetched Record: \(fetchedRecord) RecordID: \(fetchedRecord.recordID)")
+                        fetchedRecord["location"] = location as CKRecordValue
+                        publicDB.save(fetchedRecord) {
+                            record, error in
+                            if let error = error {
+                                print(error)
+                                return
+                            }
+                   
+                            
+                            guard let updatedRecord = record else {
+                                print("Error: Unable to update record")
+                                return
+                            }
+                            print("Updated Record: \(updatedRecord) RecordID: \(updatedRecord.recordID)")
+                        }
+                    }
+                }
+            }
+        }
+        return true
     }
     
     
