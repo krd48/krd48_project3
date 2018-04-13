@@ -54,12 +54,6 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
             print(savedRecord)
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -67,6 +61,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         self.LastName.resignFirstResponder()
         self.Restaurant.resignFirstResponder()
         self.FavFood.resignFirstResponder()
+    
     DispatchQueue.main.async { //performs all writing to plist actions
             if let firstname = self.FirstName.text{
                let lastname = self.LastName.text
@@ -88,7 +83,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
                     
                     print("User ID: \(userID)")
                 }
-                print("HIT HERE")
+           
                 let publicDB = CKContainer.default().publicCloudDatabase
                 let userNameRecord = CKRecord(recordType: "UserInfo") // //creates the record
                 userNameRecord["Name"] = "kyle" as CKRecordValue // c
@@ -106,6 +101,21 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
                     }
                     print("Saved Record: \(savedRecord) RecordID: \(savedRecord.recordID)")
                     
+                    // cloudkit stored defaults
+                    let keyStore = NSUbiquitousKeyValueStore()
+                    
+                    // read current count (default is 0 if it does not exist)
+                    var count = keyStore.longLong(forKey: "count")
+                    
+                    // increment count
+                    count += 1
+                    print("Count:", count)
+                    
+                    // save current count
+                    keyStore.set(count, forKey: "count")
+                    
+                    // synchronize to other apps
+                    keyStore.synchronize()
                     
                     
                     publicDB.fetch(withRecordID: savedRecord.recordID) {

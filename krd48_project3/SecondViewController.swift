@@ -116,8 +116,6 @@ class SecondViewController: UIViewController, MKMapViewDelegate, UITextFieldDele
                     }
                     print("Saved Record: \(savedRecord) RecordID: \(savedRecord.recordID)")
                     
-                    
-                    
                     publicDB.fetch(withRecordID: savedRecord.recordID) {
                         record, error in
                         if let error = error {
@@ -136,7 +134,6 @@ class SecondViewController: UIViewController, MKMapViewDelegate, UITextFieldDele
                                 return
                             }
                    
-                            
                             guard let updatedRecord = record else {
                                 print("Error: Unable to update record")
                                 return
@@ -149,6 +146,4 @@ class SecondViewController: UIViewController, MKMapViewDelegate, UITextFieldDele
         }
         return true
     }
-    
-    
 }

@@ -10,11 +10,7 @@ import UIKit
 
 class ThirdViewController: UIViewController {
     
-    
-    
-     
     @IBAction func pan(_ sender: UIPanGestureRecognizer) {
-    
     
         if sender.state == .began || sender.state == .changed {
             let translation = sender.translation(in: sender.view)
@@ -40,27 +36,10 @@ class ThirdViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     // pinch to zoom gesture
     @objc func pinchGesture(sender:UIPinchGestureRecognizer){
         sender.view?.transform = (sender.view?.transform.scaledBy(x: sender.scale, y: sender.scale))!
         sender.scale = 1.0
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
 

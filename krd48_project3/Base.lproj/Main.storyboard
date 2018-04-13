@@ -173,7 +173,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1VT-Iy-yz6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Gestures" id="knq-XW-r2q"/>
+                    <tabBarItem key="tabBarItem" title="Gestures" image="icon.jpg" id="knq-XW-r2q"/>
                     <connections>
                         <outlet property="imgImage" destination="NyG-uc-yd1" id="mfF-FM-Owo"/>
                     </connections>
@@ -209,6 +209,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="icon.jpg" width="20" height="20"/>
         <image name="pizza.jpg" width="316" height="159"/>
         <image name="second" width="30" height="30"/>
     </resources>
