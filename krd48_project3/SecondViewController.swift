@@ -99,9 +99,25 @@ class SecondViewController: UIViewController, MKMapViewDelegate, UITextFieldDele
                     print("User ID: \(userID)")
                 }
                 
+                // cloudkit stored defaults
+                let keyStore = NSUbiquitousKeyValueStore()
+                
+                // read current count (default is 0 if it does not exist)
+                var count = keyStore.longLong(forKey: "count")
+                
+                // increment count
+                count += 1
+                print("Count:", count)
+                
+                // save current count
+                keyStore.set(count, forKey: "count")
+                
+                // synchronize to other apps
+                keyStore.synchronize()
+                
                 let publicDB = CKContainer.default().publicCloudDatabase
                 let userNameRecord = CKRecord(recordType: "status") // //creates the record
-                userNameRecord["location"] = location as CKRecordValue // c
+                userNameRecord["location"] = location as CKRecordValue
                 print("record name: \(userNameRecord)")
                 
                 publicDB.save(userNameRecord) {
