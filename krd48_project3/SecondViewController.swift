@@ -103,14 +103,14 @@ class SecondViewController: UIViewController, MKMapViewDelegate, UITextFieldDele
                 let keyStore = NSUbiquitousKeyValueStore()
                 
                 // read current count (default is 0 if it does not exist)
-                var count = keyStore.longLong(forKey: "count")
+                var locate = keyStore.string(forKey: "locate")
+               
                 
-                // increment count
-                count += 1
-                print("Count:", count)
-                
+                locate = self.Location.text
+             
                 // save current count
-                keyStore.set(count, forKey: "count")
+                keyStore.set(locate, forKey: "locate")
+               
                 
                 // synchronize to other apps
                 keyStore.synchronize()
