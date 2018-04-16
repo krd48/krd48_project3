@@ -105,14 +105,23 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
                     let keyStore = NSUbiquitousKeyValueStore()
                     
                     // read current count (default is 0 if it does not exist)
-                    var count = keyStore.longLong(forKey: "count")
+                    var first = keyStore.string(forKey: "first")
+                    var last = keyStore.string(forKey: "last")
+                    var rest = keyStore.string(forKey: "rest")
+                    var food = keyStore.string(forKey: "food")
+
                     
-                    // increment count
-                    count += 1
-                    print("Count:", count)
+                    first = self.FirstName.text
+                    last = self.LastName.text
+                    rest = self.Restaurant.text
+                    food = self.FavFood.text
                     
                     // save current count
-                    keyStore.set(count, forKey: "count")
+                    keyStore.set(first, forKey: "first")
+                    keyStore.set(last, forKey: "last")
+                    keyStore.set(rest, forKey: "rest")
+                    keyStore.set(food, forKey: "food")
+
                     
                     // synchronize to other apps
                     keyStore.synchronize()
