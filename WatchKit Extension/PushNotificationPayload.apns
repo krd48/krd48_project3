@@ -1,8 +1,8 @@
 {
     "aps": {
         "alert": {
-            "body": "Test message",
-            "title": "Optional title"
+            "body": "Are the cavilers winning?",
+            "title": "Score"
         },
         "category": "myCategory",
         "thread-id":"5280"
@@ -10,8 +10,7 @@
     
     "WatchKit Simulator Actions": [
         {
-            "title": "First Button",
-            "identifier": "firstButtonAction"
+    
         }
     ],
     

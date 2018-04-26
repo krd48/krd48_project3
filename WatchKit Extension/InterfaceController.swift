@@ -12,6 +12,8 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var mapview: WKInterfaceMap!
+    var location = CLLocationManager()
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -19,8 +21,18 @@ class InterfaceController: WKInterfaceController {
     }
     
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+//        location.delegate = self
+//        location.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+//        location.startUpdatingLocation()
+//        location.requestWhenInUseAuthorization()
+//
+
+        let cavscords = CLLocationCoordinate2D(latitude: 41.496577, longitude: -81.688076)
+        let coordinateSpan = MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10)
+        self.mapview.addAnnotation(cavscords, with: .purple)
+        self.mapview.setRegion(MKCoordinateRegion(center: cavscords, span: coordinateSpan))
     }
     
     override func didDeactivate() {
