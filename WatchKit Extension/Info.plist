@@ -32,5 +32,9 @@
 	</dict>
 	<key>WKExtensionDelegateClassName</key>
 	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>app needs location access</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>app needs location access</string>
 </dict>
 </plist>

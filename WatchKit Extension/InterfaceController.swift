@@ -8,9 +8,11 @@
 
 import WatchKit
 import Foundation
+import MapKit
+import CoreLocation
 
 
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController, CLLocationManagerDelegate{
 
     @IBOutlet var mapview: WKInterfaceMap!
     var location = CLLocationManager()
@@ -23,11 +25,11 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         super.willActivate()
         
-//        location.delegate = self
-//        location.desiredAccuracy = kCLLocationAccuracyBestForNavigation
-//        location.startUpdatingLocation()
-//        location.requestWhenInUseAuthorization()
-//
+        location.delegate = self
+        location.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        location.startUpdatingLocation()
+        location.requestWhenInUseAuthorization()
+
 
         let cavscords = CLLocationCoordinate2D(latitude: 41.496577, longitude: -81.688076)
         let coordinateSpan = MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10)
