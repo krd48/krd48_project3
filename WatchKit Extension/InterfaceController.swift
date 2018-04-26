@@ -32,7 +32,7 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate{
 
 
         let cavscords = CLLocationCoordinate2D(latitude: 41.496577, longitude: -81.688076)
-        let coordinateSpan = MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10)
+        let coordinateSpan = MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
         self.mapview.addAnnotation(cavscords, with: .purple)
         self.mapview.setRegion(MKCoordinateRegion(center: cavscords, span: coordinateSpan))
     }
