@@ -1,0 +1,48 @@
+
+/* Class = "UITextField"; placeholder = "Favorite Food"; ObjectID = "1bf-aO-AKt"; */
+"1bf-aO-AKt.placeholder" = "Comida favorita";
+
+/* Class = "UITextField"; text = "Pizza"; ObjectID = "1bf-aO-AKt"; */
+"1bf-aO-AKt.text" = "Pizza";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "IsE-6x-kGo"; */
+"IsE-6x-kGo.normalTitle" = "Botón";
+
+/* Class = "UILabel"; text = "Favorite Food Application"; ObjectID = "Mpm-Ry-HJl"; */
+"Mpm-Ry-HJl.text" = "Aplicación de comida favorita";
+
+/* Class = "UITextField"; placeholder = "Favorite Restaurant"; ObjectID = "TbA-HK-tRu"; */
+"TbA-HK-tRu.placeholder" = "Restaurante favorito";
+
+/* Class = "UITextField"; text = "Chipotle"; ObjectID = "TbA-HK-tRu"; */
+"TbA-HK-tRu.text" = "Chipotle";
+
+/* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "WXX-gP-eqt"; */
+"WXX-gP-eqt.placeholder" = "Apellido";
+
+/* Class = "UITextField"; text = "Drummond"; ObjectID = "WXX-gP-eqt"; */
+"WXX-gP-eqt.text" = "Drummond";
+
+/* Class = "UITextField"; text = "Enter Your location Here"; ObjectID = "YA8-IX-XQw"; */
+"YA8-IX-XQw.text" = "Ingrese su ubicación aquí";
+
+/* Class = "UILabel"; text = "Where would you like to go?"; ObjectID = "ZSL-Wl-NBZ"; */
+"ZSL-Wl-NBZ.text" = "¿Dónde te gustaría ir?";
+
+/* Class = "UITabBarItem"; title = "Favorite Food"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "Comida favorita";
+
+/* Class = "UITabBarItem"; title = "Location"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Ubicación";
+
+/* Class = "UITextField"; placeholder = "First name"; ObjectID = "fPU-la-Cxx"; */
+"fPU-la-Cxx.placeholder" = "Nombre de pila";
+
+/* Class = "UITextField"; text = "First Name"; ObjectID = "fPU-la-Cxx"; */
+"fPU-la-Cxx.text" = "Nombre de pila";
+
+/* Class = "UITabBarItem"; title = "Gestures"; ObjectID = "knq-XW-r2q"; */
+"knq-XW-r2q.title" = "Gestos";
+
+/* Class = "UILabel"; text = "Are you hungry?"; ObjectID = "vUI-c0-ikd"; */
+"vUI-c0-ikd.text" = "¿Tienes hambre?";
