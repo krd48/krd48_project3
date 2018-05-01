@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA11C2BF2098CC1500177EA3 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA11C2BE2098CC1500177EA3 /* NotificationCenter.framework */; };
+		FA11C2C22098CC1500177EA3 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11C2C12098CC1500177EA3 /* TodayViewController.swift */; };
+		FA11C2C52098CC1500177EA3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA11C2C32098CC1500177EA3 /* MainInterface.storyboard */; };
+		FA11C2C92098CC1500177EA3 /* todayextension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA11C2BD2098CC1500177EA3 /* todayextension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FA4F09A1207E8593002C8B4B /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F09A0207E8593002C8B4B /* ThirdViewController.swift */; };
 		FA4F09A3207E8808002C8B4B /* pizza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA4F09A2207E8808002C8B4B /* pizza.jpg */; };
 		FAA2E982207BEC3C00469AC1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2E981207BEC3C00469AC1 /* CloudKit.framework */; };
@@ -27,6 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FA11C2C72098CC1500177EA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAD926D62077EEF9009A3817 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA11C2BC2098CC1500177EA3;
+			remoteInfo = todayextension;
+		};
 		FADBB7B82090FCC600C05C09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FAD926D62077EEF9009A3817 /* Project object */;
@@ -44,6 +55,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		FA11C2CD2098CC1500177EA3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FA11C2C92098CC1500177EA3 /* todayextension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FADBB7CD2090FCC600C05C09 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -69,6 +91,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA11C2BD2098CC1500177EA3 /* todayextension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = todayextension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA11C2BE2098CC1500177EA3 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		FA11C2C12098CC1500177EA3 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		FA11C2C42098CC1500177EA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		FA11C2C62098CC1500177EA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA4F09A0207E8593002C8B4B /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		FA4F09A2207E8808002C8B4B /* pizza.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pizza.jpg; path = ../../pizza.jpg; sourceTree = "<group>"; };
 		FA64DCF02093A06900AAE471 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
@@ -97,6 +124,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FA11C2BA2098CC1500177EA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA11C2BF2098CC1500177EA3 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAD926DB2077EEF9009A3817 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,10 +150,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA11C2C02098CC1500177EA3 /* todayextension */ = {
+			isa = PBXGroup;
+			children = (
+				FA11C2C12098CC1500177EA3 /* TodayViewController.swift */,
+				FA11C2C32098CC1500177EA3 /* MainInterface.storyboard */,
+				FA11C2C62098CC1500177EA3 /* Info.plist */,
+			);
+			path = todayextension;
+			sourceTree = "<group>";
+		};
 		FA6A949B207BE69900CE08AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				FAA2E981207BEC3C00469AC1 /* CloudKit.framework */,
+				FA11C2BE2098CC1500177EA3 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,6 +175,7 @@
 				FAD926E02077EEF9009A3817 /* krd48_project3 */,
 				FADBB7AB2090FCC500C05C09 /* WatchKit */,
 				FADBB7BA2090FCC600C05C09 /* WatchKit Extension */,
+				FA11C2C02098CC1500177EA3 /* todayextension */,
 				FAD926DF2077EEF9009A3817 /* Products */,
 				FA6A949B207BE69900CE08AA /* Frameworks */,
 			);
@@ -140,6 +187,7 @@
 				FAD926DE2077EEF9009A3817 /* krd48_project3.app */,
 				FADBB7AA2090FCC500C05C09 /* WatchKit.app */,
 				FADBB7B62090FCC600C05C09 /* WatchKit Extension.appex */,
+				FA11C2BD2098CC1500177EA3 /* todayextension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,6 +235,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FA11C2BC2098CC1500177EA3 /* todayextension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA11C2CC2098CC1500177EA3 /* Build configuration list for PBXNativeTarget "todayextension" */;
+			buildPhases = (
+				FA11C2B92098CC1500177EA3 /* Sources */,
+				FA11C2BA2098CC1500177EA3 /* Frameworks */,
+				FA11C2BB2098CC1500177EA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = todayextension;
+			productName = todayextension;
+			productReference = FA11C2BD2098CC1500177EA3 /* todayextension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		FAD926DD2077EEF9009A3817 /* krd48_project3 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAD926F22077EEF9009A3817 /* Build configuration list for PBXNativeTarget "krd48_project3" */;
@@ -195,11 +260,13 @@
 				FAD926DB2077EEF9009A3817 /* Frameworks */,
 				FAD926DC2077EEF9009A3817 /* Resources */,
 				FADBB7CF2090FCC600C05C09 /* Embed Watch Content */,
+				FA11C2CD2098CC1500177EA3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				FADBB7C62090FCC600C05C09 /* PBXTargetDependency */,
+				FA11C2C82098CC1500177EA3 /* PBXTargetDependency */,
 			);
 			name = krd48_project3;
 			productName = krd48_project3;
@@ -250,6 +317,10 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Drummond,Kyle";
 				TargetAttributes = {
+					FA11C2BC2098CC1500177EA3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					FAD926DD2077EEF9009A3817 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Manual;
@@ -288,11 +359,20 @@
 				FAD926DD2077EEF9009A3817 /* krd48_project3 */,
 				FADBB7A92090FCC500C05C09 /* WatchKit */,
 				FADBB7B52090FCC600C05C09 /* WatchKit Extension */,
+				FA11C2BC2098CC1500177EA3 /* todayextension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FA11C2BB2098CC1500177EA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA11C2C52098CC1500177EA3 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAD926DC2077EEF9009A3817 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -324,6 +404,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FA11C2B92098CC1500177EA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA11C2C22098CC1500177EA3 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAD926DA2077EEF9009A3817 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -348,6 +436,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FA11C2C82098CC1500177EA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA11C2BC2098CC1500177EA3 /* todayextension */;
+			targetProxy = FA11C2C72098CC1500177EA3 /* PBXContainerItemProxy */;
+		};
 		FADBB7B92090FCC600C05C09 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FADBB7B52090FCC600C05C09 /* WatchKit Extension */;
@@ -361,6 +454,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FA11C2C32098CC1500177EA3 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA11C2C42098CC1500177EA3 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		FAD926E72077EEF9009A3817 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -382,6 +483,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FA11C2CA2098CC1500177EA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3FT8PS6NT6;
+				INFOPLIST_FILE = todayextension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48.todayextension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA11C2CB2098CC1500177EA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3FT8PS6NT6;
+				INFOPLIST_FILE = todayextension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48.todayextension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		FAD926F02077EEF9009A3817 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -494,6 +625,7 @@
 		FAD926F32077EEF9009A3817 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = krd48_project3/krd48_project3.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -513,6 +645,7 @@
 		FAD926F42077EEF9009A3817 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = krd48_project3/krd48_project3.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -606,6 +739,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FA11C2CC2098CC1500177EA3 /* Build configuration list for PBXNativeTarget "todayextension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA11C2CA2098CC1500177EA3 /* Debug */,
+				FA11C2CB2098CC1500177EA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FAD926D92077EEF9009A3817 /* Build configuration list for PBXProject "krd48_project3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
