@@ -503,7 +503,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ae742203-a9cd-447e-aa39-314f5cc850dc";
+				PROVISIONING_PROFILE = "6fb2b909-5f96-4688-b6dc-34e7fc51f9ed";
 				PROVISIONING_PROFILE_SPECIFIER = krd48;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
