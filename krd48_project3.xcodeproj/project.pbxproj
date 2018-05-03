@@ -13,6 +13,9 @@
 		FA11C2C92098CC1500177EA3 /* todayextension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA11C2BD2098CC1500177EA3 /* todayextension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FA4F09A1207E8593002C8B4B /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F09A0207E8593002C8B4B /* ThirdViewController.swift */; };
 		FA4F09A3207E8808002C8B4B /* pizza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA4F09A2207E8808002C8B4B /* pizza.jpg */; };
+		FA71AC36209B56D900F2A8AF /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71AC35209B56D900F2A8AF /* ShareViewController.swift */; };
+		FA71AC39209B56D900F2A8AF /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA71AC37209B56D900F2A8AF /* MainInterface.storyboard */; };
+		FA71AC3D209B56D900F2A8AF /* shareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA71AC33209B56D900F2A8AF /* shareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FAA2E982207BEC3C00469AC1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2E981207BEC3C00469AC1 /* CloudKit.framework */; };
 		FACDEEFF20812DBE0074BBA5 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FACDEEFE20812DBE0074BBA5 /* icon.jpg */; };
 		FAD926E22077EEF9009A3817 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD926E12077EEF9009A3817 /* AppDelegate.swift */; };
@@ -38,6 +41,13 @@
 			remoteGlobalIDString = FA11C2BC2098CC1500177EA3;
 			remoteInfo = todayextension;
 		};
+		FA71AC3B209B56D900F2A8AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAD926D62077EEF9009A3817 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA71AC32209B56D900F2A8AF;
+			remoteInfo = shareExtension;
+		};
 		FADBB7B82090FCC600C05C09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FAD926D62077EEF9009A3817 /* Project object */;
@@ -61,6 +71,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				FA71AC3D209B56D900F2A8AF /* shareExtension.appex in Embed App Extensions */,
 				FA11C2C92098CC1500177EA3 /* todayextension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -101,6 +112,10 @@
 		FA64DCF02093A06900AAE471 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		FA64DCF12093A06900AAE471 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Interface.strings; sourceTree = "<group>"; };
 		FA6A949A207BE68100CE08AA /* krd48_project3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = krd48_project3.entitlements; sourceTree = "<group>"; };
+		FA71AC33209B56D900F2A8AF /* shareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = shareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA71AC35209B56D900F2A8AF /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		FA71AC38209B56D900F2A8AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		FA71AC3A209B56D900F2A8AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAA2E981207BEC3C00469AC1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		FACDEEFE20812DBE0074BBA5 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon.jpg; path = ../../icon.jpg; sourceTree = "<group>"; };
 		FAD926DE2077EEF9009A3817 /* krd48_project3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = krd48_project3.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +144,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA11C2BF2098CC1500177EA3 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA71AC30209B56D900F2A8AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +191,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FA71AC34209B56D900F2A8AF /* shareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				FA71AC35209B56D900F2A8AF /* ShareViewController.swift */,
+				FA71AC37209B56D900F2A8AF /* MainInterface.storyboard */,
+				FA71AC3A209B56D900F2A8AF /* Info.plist */,
+			);
+			path = shareExtension;
+			sourceTree = "<group>";
+		};
 		FAD926D52077EEF9009A3817 = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +208,7 @@
 				FADBB7AB2090FCC500C05C09 /* WatchKit */,
 				FADBB7BA2090FCC600C05C09 /* WatchKit Extension */,
 				FA11C2C02098CC1500177EA3 /* todayextension */,
+				FA71AC34209B56D900F2A8AF /* shareExtension */,
 				FAD926DF2077EEF9009A3817 /* Products */,
 				FA6A949B207BE69900CE08AA /* Frameworks */,
 			);
@@ -188,6 +221,7 @@
 				FADBB7AA2090FCC500C05C09 /* WatchKit.app */,
 				FADBB7B62090FCC600C05C09 /* WatchKit Extension.appex */,
 				FA11C2BD2098CC1500177EA3 /* todayextension.appex */,
+				FA71AC33209B56D900F2A8AF /* shareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -252,6 +286,23 @@
 			productReference = FA11C2BD2098CC1500177EA3 /* todayextension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		FA71AC32209B56D900F2A8AF /* shareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA71AC40209B56D900F2A8AF /* Build configuration list for PBXNativeTarget "shareExtension" */;
+			buildPhases = (
+				FA71AC2F209B56D900F2A8AF /* Sources */,
+				FA71AC30209B56D900F2A8AF /* Frameworks */,
+				FA71AC31209B56D900F2A8AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = shareExtension;
+			productName = shareExtension;
+			productReference = FA71AC33209B56D900F2A8AF /* shareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		FAD926DD2077EEF9009A3817 /* krd48_project3 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAD926F22077EEF9009A3817 /* Build configuration list for PBXNativeTarget "krd48_project3" */;
@@ -267,6 +318,7 @@
 			dependencies = (
 				FADBB7C62090FCC600C05C09 /* PBXTargetDependency */,
 				FA11C2C82098CC1500177EA3 /* PBXTargetDependency */,
+				FA71AC3C209B56D900F2A8AF /* PBXTargetDependency */,
 			);
 			name = krd48_project3;
 			productName = krd48_project3;
@@ -321,6 +373,10 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
+					FA71AC32209B56D900F2A8AF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					FAD926DD2077EEF9009A3817 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Manual;
@@ -360,6 +416,7 @@
 				FADBB7A92090FCC500C05C09 /* WatchKit */,
 				FADBB7B52090FCC600C05C09 /* WatchKit Extension */,
 				FA11C2BC2098CC1500177EA3 /* todayextension */,
+				FA71AC32209B56D900F2A8AF /* shareExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -370,6 +427,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA11C2C52098CC1500177EA3 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA71AC31209B56D900F2A8AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA71AC39209B56D900F2A8AF /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +477,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA71AC2F209B56D900F2A8AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA71AC36209B56D900F2A8AF /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAD926DA2077EEF9009A3817 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -441,6 +514,11 @@
 			target = FA11C2BC2098CC1500177EA3 /* todayextension */;
 			targetProxy = FA11C2C72098CC1500177EA3 /* PBXContainerItemProxy */;
 		};
+		FA71AC3C209B56D900F2A8AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA71AC32209B56D900F2A8AF /* shareExtension */;
+			targetProxy = FA71AC3B209B56D900F2A8AF /* PBXContainerItemProxy */;
+		};
 		FADBB7B92090FCC600C05C09 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FADBB7B52090FCC600C05C09 /* WatchKit Extension */;
@@ -458,6 +536,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				FA11C2C42098CC1500177EA3 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		FA71AC37209B56D900F2A8AF /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA71AC38209B56D900F2A8AF /* Base */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -506,6 +592,36 @@
 				INFOPLIST_FILE = todayextension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48.todayextension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA71AC3E209B56D900F2A8AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3FT8PS6NT6;
+				INFOPLIST_FILE = shareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48.shareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA71AC3F209B56D900F2A8AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3FT8PS6NT6;
+				INFOPLIST_FILE = shareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48.shareExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -744,6 +860,15 @@
 			buildConfigurations = (
 				FA11C2CA2098CC1500177EA3 /* Debug */,
 				FA11C2CB2098CC1500177EA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA71AC40209B56D900F2A8AF /* Build configuration list for PBXNativeTarget "shareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA71AC3E209B56D900F2A8AF /* Debug */,
+				FA71AC3F209B56D900F2A8AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
