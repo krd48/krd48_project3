@@ -13,13 +13,17 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
   
     
-    @IBAction func updatedata(_ sender: Any) {
+    @IBAction func linkTodayExtension(_ sender: Any) {
+        
+        let path = URL(string: "linkButtonTodayExtension://")!
+        extensionContext?.open(path, completionHandler: nil)
+        
     }
-    @IBOutlet weak var data: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view from its nib.
+        
         self.extensionContext?.widgetLargestAvailableDisplayMode = NCWidgetDisplayMode.expanded
     }
     
@@ -27,12 +31,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
   
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-        // Perform any setup necessary in order to update the view.
-        
-        // If an error is encountered, use NCUpdateResult.Failed
-        // If there's no update required, use NCUpdateResult.NoData
-        // If there's an update, use NCUpdateResult.NewData
-        
+     
         completionHandler(NCUpdateResult.newData)
     }
     
