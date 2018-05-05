@@ -10,3 +10,5 @@ I also made a commit or two from a different laptop since I do not have a mac bo
 appears as someone elses, as I was signed into their github account.
 
 Gestures that I created are pan and pinch to zoom.
+
+[update on May 4th, 2018] I added icon.jpg and pizza.jpg to my assets. I initally added them to my project when using them but not to my assets folder so they never did commit for some reason. This should fix the compile errors about the missing picture.
