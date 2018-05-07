@@ -5,9 +5,9 @@ IOS project 3
 [update on May 4th, 2018] I added icon.jpg and pizza.jpg to my assets. I initally added them to my project when using them but not to my assets folder so they never did commit for some reason. This should fix the compile errors about the missing picture.
 
 -added watchkit extension. my notification is a cavs score alert, my complicaiton is mapkit.
--added localization for spanish language
--added today extension
--added share extension
+-added localization for spanish language.
+-added today extension.
+-added share extension.
 
 --------------------------------------------------------------------------------------------------------------------------
 I built on top of my project 2 for this project.
