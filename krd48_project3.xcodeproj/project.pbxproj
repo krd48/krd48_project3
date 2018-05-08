@@ -117,6 +117,10 @@
 		FA71AC38209B56D900F2A8AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		FA71AC3A209B56D900F2A8AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAA2E981207BEC3C00469AC1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		FAA90FD020A21A41003F1496 /* WatchKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatchKit.entitlements; sourceTree = "<group>"; };
+		FAA90FD120A21A7E003F1496 /* WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		FAA90FD220A21A8A003F1496 /* todayextension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = todayextension.entitlements; sourceTree = "<group>"; };
+		FAA90FD320A21A95003F1496 /* shareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = shareExtension.entitlements; sourceTree = "<group>"; };
 		FACDEEFE20812DBE0074BBA5 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon.jpg; path = ../../icon.jpg; sourceTree = "<group>"; };
 		FAD926DE2077EEF9009A3817 /* krd48_project3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = krd48_project3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD926E12077EEF9009A3817 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 		FA11C2C02098CC1500177EA3 /* todayextension */ = {
 			isa = PBXGroup;
 			children = (
+				FAA90FD220A21A8A003F1496 /* todayextension.entitlements */,
 				FA11C2C12098CC1500177EA3 /* TodayViewController.swift */,
 				FA11C2C32098CC1500177EA3 /* MainInterface.storyboard */,
 				FA11C2C62098CC1500177EA3 /* Info.plist */,
@@ -194,6 +199,7 @@
 		FA71AC34209B56D900F2A8AF /* shareExtension */ = {
 			isa = PBXGroup;
 			children = (
+				FAA90FD320A21A95003F1496 /* shareExtension.entitlements */,
 				FA71AC35209B56D900F2A8AF /* ShareViewController.swift */,
 				FA71AC37209B56D900F2A8AF /* MainInterface.storyboard */,
 				FA71AC3A209B56D900F2A8AF /* Info.plist */,
@@ -246,6 +252,7 @@
 		FADBB7AB2090FCC500C05C09 /* WatchKit */ = {
 			isa = PBXGroup;
 			children = (
+				FAA90FD020A21A41003F1496 /* WatchKit.entitlements */,
 				FADBB7AC2090FCC500C05C09 /* Interface.storyboard */,
 				FADBB7AF2090FCC500C05C09 /* Assets.xcassets */,
 				FADBB7B12090FCC500C05C09 /* Info.plist */,
@@ -256,6 +263,7 @@
 		FADBB7BA2090FCC600C05C09 /* WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FAA90FD120A21A7E003F1496 /* WatchKit Extension.entitlements */,
 				FADBB7BB2090FCC600C05C09 /* InterfaceController.swift */,
 				FADBB7BD2090FCC600C05C09 /* ExtensionDelegate.swift */,
 				FADBB7BF2090FCC600C05C09 /* NotificationController.swift */,
@@ -371,11 +379,21 @@
 				TargetAttributes = {
 					FA11C2BC2098CC1500177EA3 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					FA71AC32209B56D900F2A8AF = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					FAD926DD2077EEF9009A3817 = {
 						CreatedOnToolsVersion = 9.2;
@@ -394,11 +412,21 @@
 					};
 					FADBB7A92090FCC500C05C09 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					FADBB7B52090FCC600C05C09 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -575,12 +603,15 @@
 		FA11C2CA2098CC1500177EA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = todayextension/todayextension.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3FT8PS6NT6;
 				INFOPLIST_FILE = todayextension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48.todayextension;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48.today;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "21fa5ef1-4334-442b-b2fa-78a296e640f7";
+				PROVISIONING_PROFILE_SPECIFIER = krd48iOSS18today;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -590,12 +621,15 @@
 		FA11C2CB2098CC1500177EA3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = todayextension/todayextension.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3FT8PS6NT6;
 				INFOPLIST_FILE = todayextension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48.todayextension;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48.today;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "21fa5ef1-4334-442b-b2fa-78a296e640f7";
+				PROVISIONING_PROFILE_SPECIFIER = krd48iOSS18today;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -605,12 +639,16 @@
 		FA71AC3E209B56D900F2A8AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = shareExtension/shareExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3FT8PS6NT6;
 				INFOPLIST_FILE = shareExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48.shareExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48.share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6a15c2e4-9700-46e9-9a90-db098f7c4f49";
+				PROVISIONING_PROFILE_SPECIFIER = krd48iOSS18share;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -620,12 +658,16 @@
 		FA71AC3F209B56D900F2A8AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = shareExtension/shareExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3FT8PS6NT6;
 				INFOPLIST_FILE = shareExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48.shareExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48.share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6a15c2e4-9700-46e9-9a90-db098f7c4f49";
+				PROVISIONING_PROFILE_SPECIFIER = krd48iOSS18share;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -786,12 +828,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = WatchKit/WatchKit.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3FT8PS6NT6;
 				IBSC_MODULE = WatchKit_Extension;
 				INFOPLIST_FILE = WatchKit/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5e340669-43f3-4678-8153-e346633b8930";
+				PROVISIONING_PROFILE_SPECIFIER = krd48iOSS18watchkitapp;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -805,12 +850,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = WatchKit/WatchKit.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3FT8PS6NT6;
 				IBSC_MODULE = WatchKit_Extension;
 				INFOPLIST_FILE = WatchKit/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5e340669-43f3-4678-8153-e346633b8930";
+				PROVISIONING_PROFILE_SPECIFIER = krd48iOSS18watchkitapp;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -823,12 +871,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "WatchKit Extension/WatchKit Extension.entitlements";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3FT8PS6NT6;
 				INFOPLIST_FILE = "WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "cf97a7f4-e8d5-4053-9795-b84340d1eb83";
+				PROVISIONING_PROFILE_SPECIFIER = krd48iOSS18watchkitextension;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -841,12 +892,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "WatchKit Extension/WatchKit Extension.entitlements";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3FT8PS6NT6;
 				INFOPLIST_FILE = "WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.krd48.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "cf97a7f4-e8d5-4053-9795-b84340d1eb83";
+				PROVISIONING_PROFILE_SPECIFIER = krd48iOSS18watchkitextension;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
