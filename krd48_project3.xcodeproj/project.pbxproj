@@ -12,12 +12,10 @@
 		FA11C2C52098CC1500177EA3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA11C2C32098CC1500177EA3 /* MainInterface.storyboard */; };
 		FA11C2C92098CC1500177EA3 /* todayextension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA11C2BD2098CC1500177EA3 /* todayextension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FA4F09A1207E8593002C8B4B /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F09A0207E8593002C8B4B /* ThirdViewController.swift */; };
-		FA4F09A3207E8808002C8B4B /* pizza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA4F09A2207E8808002C8B4B /* pizza.jpg */; };
 		FA71AC36209B56D900F2A8AF /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71AC35209B56D900F2A8AF /* ShareViewController.swift */; };
 		FA71AC39209B56D900F2A8AF /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA71AC37209B56D900F2A8AF /* MainInterface.storyboard */; };
 		FA71AC3D209B56D900F2A8AF /* shareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA71AC33209B56D900F2A8AF /* shareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FAA2E982207BEC3C00469AC1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2E981207BEC3C00469AC1 /* CloudKit.framework */; };
-		FACDEEFF20812DBE0074BBA5 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FACDEEFE20812DBE0074BBA5 /* icon.jpg */; };
 		FAD926E22077EEF9009A3817 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD926E12077EEF9009A3817 /* AppDelegate.swift */; };
 		FAD926E42077EEF9009A3817 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD926E32077EEF9009A3817 /* FirstViewController.swift */; };
 		FAD926E62077EEF9009A3817 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD926E52077EEF9009A3817 /* SecondViewController.swift */; };
@@ -108,7 +106,6 @@
 		FA11C2C42098CC1500177EA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		FA11C2C62098CC1500177EA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA4F09A0207E8593002C8B4B /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		FA4F09A2207E8808002C8B4B /* pizza.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pizza.jpg; path = ../../pizza.jpg; sourceTree = "<group>"; };
 		FA64DCF02093A06900AAE471 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		FA64DCF12093A06900AAE471 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Interface.strings; sourceTree = "<group>"; };
 		FA6A949A207BE68100CE08AA /* krd48_project3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = krd48_project3.entitlements; sourceTree = "<group>"; };
@@ -121,7 +118,6 @@
 		FAA90FD120A21A7E003F1496 /* WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		FAA90FD220A21A8A003F1496 /* todayextension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = todayextension.entitlements; sourceTree = "<group>"; };
 		FAA90FD320A21A95003F1496 /* shareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = shareExtension.entitlements; sourceTree = "<group>"; };
-		FACDEEFE20812DBE0074BBA5 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon.jpg; path = ../../icon.jpg; sourceTree = "<group>"; };
 		FAD926DE2077EEF9009A3817 /* krd48_project3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = krd48_project3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD926E12077EEF9009A3817 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD926E32077EEF9009A3817 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -235,8 +231,6 @@
 		FAD926E02077EEF9009A3817 /* krd48_project3 */ = {
 			isa = PBXGroup;
 			children = (
-				FACDEEFE20812DBE0074BBA5 /* icon.jpg */,
-				FA4F09A2207E8808002C8B4B /* pizza.jpg */,
 				FA6A949A207BE68100CE08AA /* krd48_project3.entitlements */,
 				FAD926E12077EEF9009A3817 /* AppDelegate.swift */,
 				FAD926E32077EEF9009A3817 /* FirstViewController.swift */,
@@ -473,10 +467,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FACDEEFF20812DBE0074BBA5 /* icon.jpg in Resources */,
 				FAD926EB2077EEF9009A3817 /* Assets.xcassets in Resources */,
 				FAD926E92077EEF9009A3817 /* Main.storyboard in Resources */,
-				FA4F09A3207E8808002C8B4B /* pizza.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
