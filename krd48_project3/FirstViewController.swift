@@ -72,6 +72,18 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
                let favfood = self.FavFood.text
                let swic = self.Switch.isOn
                 let restaurant = self.Restaurant.text
+                
+                guard let defaults = UserDefaults(suiteName: "group.edu.uakron.cs.ios.krd48") else {
+                    return
+                }
+                let unique = self.FirstName.text
+                print(#function, #line, "Message: ", unique)
+                defaults.set(unique, forKey: "Non")
+                let unique1 = self.LastName.text
+                print(#function, #line, "Message: ", unique1)
+                defaults.set(unique1, forKey: "Non2")
+                
+                
                 CKContainer.default().fetchUserRecordID() {
                     recordID, error in
                     
@@ -118,29 +130,16 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
                     first = self.FirstName.text
                     last = self.LastName.text
                     rest = self.Restaurant.text
-                    food = self.FavFood.text
-                    
+                    food = self.FavFood.text                    
                     // save current count
                     keyStore.set(first, forKey: "first")
                     keyStore.set(last, forKey: "last")
                     keyStore.set(rest, forKey: "rest")
                     keyStore.set(food, forKey: "food")
                     
-                    guard let defaults = UserDefaults(suiteName: "group.edu.uakron.cs.ios.krd48") else {
-                        return
-                    }
-                    
-                    
-                    let message = self.FirstName.text
-                   // print(#function, #line, "Message: ", message ?? string)
-                    defaults.set(message, forKey: "Message")
-                    let lastname = self.LastName.text
-                    defaults.set(lastname, forKey: "Messagetwo")
 
-                    
-                    // synchronize to other apps
                     keyStore.synchronize()
-                    
+
                     
                     publicDB.fetch(withRecordID: savedRecord.recordID) {
                         record, error in

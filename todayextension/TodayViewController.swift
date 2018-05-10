@@ -34,25 +34,24 @@ class TodayViewController: UIViewController, NCWidgetProviding {
   
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
+        guard let message = UserDefaults(suiteName: "group.edu.uakron.cs.ios.krd48")?.string(forKey: "Non") else {
+            print("Error: Unable to access App Group")
+            completionHandler(NCUpdateResult.noData)
+            return
+        }
         
-        // read value from the App Group User Defaults
-        /* Note: Will need to adjust to your App Group name */
-        guard let message = UserDefaults(suiteName:"group.edu.uakron.cs.ios.krd48")?.string(forKey: "Message") else {
+        guard let message2 = UserDefaults(suiteName: "group.edu.uakron.cs.ios.krd48")?.string(forKey: "Non2") else {
             print("Error: Unable to access App Group")
             completionHandler(NCUpdateResult.noData)
             return
         }
-       
-        guard let last = UserDefaults(suiteName:"group.edu.uakron.cs.ios.krd48")?.string(forKey: "Message") else {
-            print("Error: Unable to access App Group")
-            completionHandler(NCUpdateResult.noData)
-            return
-        }
-        print(#function, #line, "Message: ", message)
+        self.last.text = message2
         self.firstname.text = message
-        self.last.text = last
+        
+        print(#function, #line, "Message: ", message)
+        
      
-        completionHandler(NCUpdateResult.newData)
+        completionHandler(NCUpdateResult.noData)
         
     }
     
