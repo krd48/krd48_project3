@@ -12,6 +12,9 @@ import NotificationCenter
 class TodayViewController: UIViewController, NCWidgetProviding {
     
   
+
+    @IBOutlet weak var last: UILabel!
+    @IBOutlet weak var firstname: UILabel!
     
     @IBAction func linkTodayExtension(_ sender: Any) {
         
@@ -31,8 +34,26 @@ class TodayViewController: UIViewController, NCWidgetProviding {
   
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
+        
+        // read value from the App Group User Defaults
+        /* Note: Will need to adjust to your App Group name */
+        guard let message = UserDefaults(suiteName:"group.edu.uakron.cs.ios.krd48")?.string(forKey: "Message") else {
+            print("Error: Unable to access App Group")
+            completionHandler(NCUpdateResult.noData)
+            return
+        }
+       
+        guard let last = UserDefaults(suiteName:"group.edu.uakron.cs.ios.krd48")?.string(forKey: "Message") else {
+            print("Error: Unable to access App Group")
+            completionHandler(NCUpdateResult.noData)
+            return
+        }
+        print(#function, #line, "Message: ", message)
+        self.firstname.text = message
+        self.last.text = last
      
         completionHandler(NCUpdateResult.newData)
+        
     }
     
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {

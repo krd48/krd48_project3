@@ -21,6 +21,10 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var LastName: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // write value to the App Group User Defaults
+        
+
      
         self.FirstName.delegate = self
         self.LastName.delegate = self
@@ -121,6 +125,17 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
                     keyStore.set(last, forKey: "last")
                     keyStore.set(rest, forKey: "rest")
                     keyStore.set(food, forKey: "food")
+                    
+                    guard let defaults = UserDefaults(suiteName: "group.edu.uakron.cs.ios.krd48") else {
+                        return
+                    }
+                    
+                    
+                    let message = self.FirstName.text
+                   // print(#function, #line, "Message: ", message ?? string)
+                    defaults.set(message, forKey: "Message")
+                    let lastname = self.LastName.text
+                    defaults.set(lastname, forKey: "Messagetwo")
 
                     
                     // synchronize to other apps
